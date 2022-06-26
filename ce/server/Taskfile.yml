@@ -29,8 +29,8 @@ env:
   WORKSPACE: "crates/"
 
 # env file:
-dotenv:
-  - .env
+#dotenv:
+#  - .env
 
 ################################################################################################
 
@@ -131,5 +131,5 @@ tasks:
 
   push:
     cmds:
-      - git push origin main --tags
+      - git push origin ce --tags
       - repo_url=`git remote -v | grep push | awk -F ":" '{print $2}' | awk -F ".git" '{print "https://github.com/"$1}'`; open $repo_url

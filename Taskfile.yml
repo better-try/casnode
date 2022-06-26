@@ -1,5 +1,14 @@
 version: 3
 
+includes:
+  server:
+    taskfile: ./ce/server/Taskfile.yml
+    dir: ./ce/server/
+
+# env file:
+dotenv:
+  - .env
+
 tasks:
   run:
     cmds:
@@ -17,3 +26,6 @@ tasks:
     cmds:
       - open http://localhost:9000/swagger
 
+  push:
+    cmds:
+      - task: server:push
