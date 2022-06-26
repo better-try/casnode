@@ -6,7 +6,7 @@ version: "3"
 includes:
   # way: global path
   sre:
-    taskfile: ~/.local/task/better-sre/config/Taskfile.yml # TODO: please create `~/.task/` first before use
+    taskfile: ~/.local/task/better-sre/config/Taskfile.yml # TODO: auto create by `task setup`
     dir: ~/.local/task/better-sre/config # global path
     optional: true # safeguard, if not found, no error
 

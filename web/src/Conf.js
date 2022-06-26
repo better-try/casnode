@@ -16,9 +16,9 @@ import * as ConfBackend from "./backend/ConfBackend.js";
 export const AuthConfig = {
   // serverUrl: "https://door.casbin.com",
   serverUrl: "http://localhost:7001",
-  clientId: "014ae4bd048734ca2dea",
-  organizationName: "casbin",
-  appName: "app-casnode",
+  clientId: "e5dd09301f8dea07387a", // todo x: sync update
+  organizationName: "casbin-forum", // todo x: sync update
+  appName: "casbin-forum", // todo x: sync update
   redirectPath: "/callback",
 };
 
