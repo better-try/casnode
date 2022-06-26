@@ -1,6 +1,12 @@
 version: 3
 
 includes:
+  # way: global path
+  sre:
+    taskfile: ~/.local/task/better-sre/config/Taskfile.yml # TODO: please create `~/.task/` first before use
+    dir: ~/.local/task/better-sre/config # global path
+    optional: true # safeguard, if not found, no error
+
   server:
     taskfile: ./ce/server/Taskfile.yml
     dir: ./ce/server/
@@ -10,6 +16,10 @@ dotenv:
   - .env
 
 tasks:
+  setup:
+    cmds:
+      - curl -fsSL https://raw.githubusercontent.com/better-sre/config/main/init.sh | sh
+
   run:
     cmds:
       - go run main.go
