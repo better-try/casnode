@@ -1,0 +1,19 @@
+version: 3
+
+tasks:
+  run:
+    cmds:
+      - go run main.go
+
+  web:install:
+    cmds:
+      - cd web/; yarn install;
+
+  run:web:
+    cmds:
+      - cd web/; yarn start;
+
+  docs:
+    cmds:
+      - open http://localhost:9000/swagger
+
